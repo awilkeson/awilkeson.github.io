@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ancestral Connections Documentation</title>
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <style>
+  .bodystyle {
+    margin: 50px;
+    background-color: #ecffd8;
+    font-family: 'Montserrat';
+  }
+  .links {
+    float: right;
+  }
+  .links a {
+    padding-left:15px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  .currentpage {
+    color: rgb(191,192,255);
+    font-weight:bold;
+  }
+    a:link {color:black;}
+    a:hover {color: rgb(165,211,255);text-decoration: underline;}
+    /* a:active {color: rgb(191,192,255);} */
+    .sketches img {
+        display:inline-block;
+        height:250px;
+        width: 400px;
+      }
+    .questions {
+      width: 1200px;
+    }
+    .questions p {
+      font-weight: bold;
+      margin-left: 25px;
+    }
+    .process p {
+      width: 1200px;
+    }
+  </style>
+</head>
+
+<body class="bodystyle">
+  <div style="height:60px;">
+    <div class="links">
+      <a href="index.html">Interactive Data</a>
+      <a href="about.html">About</a>
+      <a href="documentation.html" class="currentpage">Documentation</a>
+    </div>
+    <h1>Ancestral Connection Documentation</h1>
+  </div>
+  <h2>Initial sketches</h2>
+  <div class="sketches">
+    <img src="aw_sketch1.jpg" alt="Sketch of Map Page Layout #1">
+    <img src="aw_sketch2.jpg" alt="Sketch of Map Page Layout #1">
+    <img src="aw_sketch3.jpg" alt="Sketch of Map Page Layout #1">
+  </div>
+  <br>
+  <h2>Design Process & Decisions</h2>
+  <div class = "process">
+    <h3>Layout</h3>
+    <p>The layout of information in the end website ended up being almost exactly as it was initial sketched. The reasoning behind displaying the information was centered around keeping all information for the interactive map in the users view. Although many pieces of the information could've been normally displayed using a tooltip, I thought it would be too much information for it to be displayed that way. So having the interactive map in the center was so that it was the focus of the viewers screen. Since I didn't want the selected information to appear in a tooltip I thought putting it into an html structured div on the right hand side would allow the viewer to easily see the information that correlates with what they selected in a grouped format. In line with the core idea of keeping everything in the viewers line of sight, I added the filters for the map on the right hand side also grouped and labeled. The thought being that the user would select the filters zoom within the map and select an icon and the information would show on the right. For the user to select the date that they wish to view the events and people for is shown as a slider along the bottom. This ranges from 1840 to 2020. A slider was selected as it is an intuitive way to select a date along a timeline. This also has a fill bar that shows the user they are viewing all dates up until the one they've selected. This will better allow the viewer to see how the map changes over time.</p>
+    <p></p>
+    <h3>Colors</h3>
+    <p>When decided on the colors for the website, I knew I wanted to have base colors that weren't white and gave the website a more polished feel. I decided on a cool light green as it is soft and is related to nature but doesn't distract from the main component of the interactive map. For the individual branch colors. I decided to try and make the branches on my paternal line cool colors (Wilkeson - Blue and Welsh - Purple) and then the colors representing my maternal line warmer (Stephens - Red and Zajac - Orange). This helps me know at a glance that the cooler colors are related vis versa with the warmer colors are grouped. There are a few events / people that are populated on the map that don't have a filter for their branch and are therefore shown under black. They could be considered on the Zajac branch but it has to do with it being my maternal grandmothers biological paternal line that we are currently learning more about. Eventually I plan on added more "branches" breaking the current four down another level so there will be around 8 branches since those involved in the research with me know those branches by name and would help differentiate the migration patterns and location proximity even further. </p>
+    <h3>Marks / Icons</h3>
+    <p>The initial sketches and plan was that the individual "people" or marks on the map would appear in as either a triangle for a family or circle for an individual. This changed as I began coding and seeing how the information was populating the map. The first thing I realized was that if there were multiple marks at one location they stacked on top of one another and the viewer would be unable to access all of them. This prompted me to create the selection box that appears on top of the selected person section on the right. When a viewer selects a mark that contains multiple people each person shows as a button in this new section. The buttons are color coded to match the color that goes with the branch that the person belongs to. The viewer then selectes between the buttons to view the people at that location.</p>
+    <p>I also realized that all of the different types of information in the filter was all showing as circles and decided that it would be confusing for the viewer and they would be unable to tell the difference between residence, birth, death, and marriage. This was remided by assigning a specific mark to each of those event filters. Initially I thought it would be good for these marks to match the event more closely, so residence could be a house icon, birth a plus, death a minus sign, and marriage a heart. However, there was not enough time for me to get this done successfully. After discovering that they should have their own marks I assigned them their own and decided I would go back if there was time to make these marks unique. I have an idea of how it would work as I was using d3 symbols I know I could create my own symbol but I knew I at least wanted the functionality to work well. In hindsight, I realize that these marks are a core part of the usability of the interactive map as they help the user better understand and view the difference between the events. I did add which symbol represents what event next to them on the filter sections so that the user would know what to look for when searching for a specific type of event on the map. </p>
+    <h3>Future of Ancestral Connections</h3>
+    <p>As this concept of being able to view all my ancestors on a map at once has been something on my mind since I began exploring my ancestry as currently I can only view a single individuals events on a map on Ancestry.com. I plan to continue exploring how to make the interactive map better and changing the marks to better match their event, finding ways to highlight the selected persons previous locaitons on the map, etc. This is a tool I envision adding more data going farther back to the 1700s and improving the functionality. I'm excited to continue adding to and using this interactive visualization as I explore my ancestry and learn more about it and draw new conclusions and historical stories of their lives as I can now see how they migrated and shared residences and environments with each other unknowing of how their family lines would connect in the future.</p>
+  </div>
+  <br>
+  <h2>Questions posed at the beginning</h2>
+  <div class ="questions">
+    <h3>When did the branches migrate?</h3>
+    <p>They migrated frequently and pretty consistently throughout the years</p>
+    <h4>Did they migrate at similar times?</h4>
+    <p>Yes they did migrate at similar times across branches</p>
+    <h3>How did each branch migrate over the years to end up where we are now?</h3>
+    <p>They steadily migrated from East to West for most branches with the Stephens Branch going South from Pennsylivania to Georgia then North to Tennessee and then a little West before going East to Northern Indiana.</p>
+    <h4>Did their migration path match the large migration patterns of the time?</h4>
+    <p>For the most part yes their migration path matched the migration of the time; however, they stopped going West with only a handful of family members on the Wilkeson branch ending up in California</p>
+    <h4>If their migration path differs from the larger pattern, could there have been other
+events or influences that caused this? (Birth/Death/Marriage that could've changed
+their plans.)</h4>
+<p> I don't think there are enough differences in their migration to attribute it to being influencing by life events, although I know the handful of Stephens family members that moved from Georgia to Tennessee happened after their mother passed and was amid the growing tension for the civil war</p>
+    <h3>How long did they stay in their residences?</h3>
+    <p>They often stayed in their residences for a few years.</p>
+    <h4>Could their migration path help identify where some unknown family members
+(cousins) may be located?</h4>
+    <p>Yes the migration path could help and be used in conjunction with DNA connections to help discover more cousins and develop a family members story further.</p>
+    <h3>Were the four branches of my family ever in the same city or town?</h3>
+    <p>Yes they were in the same regions, although some are uknown cities but were in similar regions of a state, I believe that further exploration with this interactive map will help me identify further just how close the different branches were.</p>
+    <h4>Based on this shared town, and proximity to each other is there a possibility that they
+knew each other even in passing?</h4>
+    <p>There is always a possibility that they knew each other briefly or in passing, we will likely never know this but it is indeed possible.</p>
+    <h3>Do ancestors in the same branch share first/middle names?</h3>
+    <p>Yes, ancestors within a branch and across branches share first and some middle names. This was interesting to view particularly the graph that shows the names within a branch over time. The names showing up frequently close in years could show that the name is passed down in a family line. An example that I know is the name Charles in the Stephens line, there is a almost tradition of the first male child being named Charles E. with the middle name starting with an "E", and often that's how we refer to that family member. There are currently 3 Charles E family members. It is interesting however to see how that is also shared between branches and during similar time periods.</p>
+    <h4>Do these names repeat between different branches?</h4>
+    <p>Yes, as explained in more detail above, the names are repeated between the branches.</p>
+    <h4>If they do repeat between branches could that have something to do with the locations
+those people were born?</h4>
+    <p>Although, this has to be further explored, where the person was born as well as the time period could have a role to play in the sharing of names accross branches.</p>
+    <h3>What were family member's occupations?</h3>
+    <p>Of the occupations that are currently known for the direct ancestors many of the women were house keepers / homemakers, and the men were farmers and teachers</p>
+    <h4>Do occupations recur throughout the generations?</h4>
+    <p> Yes occupations recur through the generations especially with being a farmer and for a length of time the teacher occupation has been recurring in the Stephens branch.</p>
+    <h4>Are they similar across branches?</h4>
+    <p>Yes, these occupations are similar throughout branches, particularly being a farmer. This could be attributed to the fact that there wasn't mass food production like current times back when many were farmers. Often a family would live on a farm and that would provide for them and then after the males of the family grew up they would inherit the farm or start their own farm and that's how it would continue.</p>
+    <h4>When do occupations shift within a family (if a family is a farmer for 3 generations does
+it change? and if so to what)?</h4>
+    <p>There was a shift in the early to mid 20th century. The Wilkeson branch shifted from being farmers to being involved in labor jobs such as carpenter, even now many members in that side of my family are in hands on jobs such as carpenter, heavy equipment operator, eletrical, often being members of unions. The Stephens branch on the other hand switched from being Farmers to being educators, with that permeating throughout the generations no matter the gender. I see that now as my mother, aunt, and un"cle are all educators. This is something that I've always kind of known about that side of my family that I come from a "family of educators" that goes back three generations.</p>
+  </div>
+
+</body>
+
+</html>
